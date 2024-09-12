@@ -19,7 +19,7 @@ server.listen(port, ready)
 
 const corsOptions = {
     credentials: true,
-    origin: true
+    origin: 'https://cookietestfront.onrender.com'
 }
 
 server.use(express.json())
