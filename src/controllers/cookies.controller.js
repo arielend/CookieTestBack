@@ -28,6 +28,8 @@ class CookiesController {
             //     maxAge: 60 * 60 * 1000 // 1 hora de vida
             // })
 
+            console.log('Los headers en la solicitud: ', request.headers);
+
             response.cookie('simpleCookie','simpleValue',{
                 httpOnly: true,
                 secure: true,
