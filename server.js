@@ -26,9 +26,8 @@ server.use(express.json())
 server.use(express.urlencoded({ extended: true }))
 server.use(express.static(__dirname + '/public'))
 
-server.use(cookieParser('SecretCookieKey'))
 server.use(cors(corsOptions))
-
+server.use(cookieParser('SecretCookieKey'))
 server.use('/', indexRouter)
 
 server.use(errorHandler)
