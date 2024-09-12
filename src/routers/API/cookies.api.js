@@ -3,6 +3,6 @@ import { Router } from 'express'
 
 const cookiesRouter = Router()
 
-cookiesRouter.get("/", getCookies)
+cookiesRouter.post("/", getCookies)
 
 export default cookiesRouter
