@@ -22,6 +22,14 @@ const corsOptions = {
     origin: 'https://cookietestfront.onrender.com'
 }
 
+server.use((req, res, next) => {
+    console.log('------------------------------')
+    console.log('CUSTOM LOG: Request headers')
+    console.log(JSON.stringify(req.headers, null, 2))
+    console.log('------------------------------')
+    next();
+})
+
 server.use(express.json())
 server.use(express.urlencoded({ extended: true }))
 server.use(express.static(__dirname + '/public'))
