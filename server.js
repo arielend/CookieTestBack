@@ -19,7 +19,7 @@ server.listen(port, ready)
 
 const corsOptions = {
     credentials: true,
-    origin: '*'
+    origin: true
 }
 
 server.use(express.json())
