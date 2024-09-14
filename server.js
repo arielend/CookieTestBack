@@ -19,16 +19,8 @@ server.listen(port, ready)
 
 const corsOptions = {
     credentials: true,
-    origin: 'https://cookietestfront.onrender.com'
+    origin: 'https://cookie-test-front.vercel.app/'
 }
-
-server.use((req, res, next) => {
-    console.log('------------------------------')
-    console.log('CUSTOM LOG: Request headers')
-    console.log(JSON.stringify(req.headers, null, 2))
-    console.log('------------------------------')
-    next();
-})
 
 server.use(express.json())
 server.use(express.urlencoded({ extended: true }))
