@@ -19,7 +19,7 @@ server.listen(port, ready)
 
 const corsOptions = {
     credentials: true,
-    origin: 'https://cookie-test-front.vercel.app/'
+    origin: 'https://cookie-test-front.vercel.app'
 }
 
 server.use(express.json())
